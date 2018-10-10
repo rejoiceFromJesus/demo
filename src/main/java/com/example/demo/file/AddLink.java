@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.Field;
+import java.util.List;
 import java.util.stream.Stream;
 
 import org.springframework.util.FileCopyUtils;
@@ -89,7 +90,7 @@ public class AddLink {
 	    	        Rectangle pageSize;
 	    	        PdfCanvas canvas;
 	    	        int n = pdfDoc.getNumberOfPages();
-	    	        Link link = new Link("http://blog.csdn.net/jiongyi1", PdfAction.createURI("http://blog.csdn.net/jiongyi1"));
+	    	        Link link = new Link("http://www.rejoiceblog.com/", PdfAction.createURI("http://www.rejoiceblog.com/"));
 	    	        Paragraph header = new Paragraph().add(link)
 	    	                .setFont(PdfFontFactory.createFont(FontConstants.HELVETICA))
 	    	                .setFontSize(14)

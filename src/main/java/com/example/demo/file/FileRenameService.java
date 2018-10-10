@@ -9,6 +9,9 @@ public class FileRenameService {
 	public static void rename(String ...paths) {
 		for (String path : paths) {
 			File folder = new File(path);
+			if(folder == null) {
+				return;
+			}
 			Stream.of(folder.listFiles()).forEach(file -> {
 				String oldPath = file.getAbsolutePath();
 				if(!oldPath.endsWith(".pdf") && !oldPath.endsWith(".azw3") && !oldPath.endsWith(".mobi") && !oldPath.endsWith(".epub")) {
